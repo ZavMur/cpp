@@ -38,11 +38,8 @@ void movimientoInventario(string codigo, int cantidad, string tipoMovimiento){
                 productos[i][2] = to_string(stoi(productos[i][2]) - cantidad);
             }
         }
-        
     }
-    
 }
-
 void ingresoDeInventario(){
     string codigo = "";
     int cantidad = 0;
@@ -61,7 +58,6 @@ void ingresoDeInventario(){
 
     movimientoInventario (codigo, cantidad, "+");
 }
-
 void salidaDeInventario(){
     string codigo = "";
     int cantidad = 0;
@@ -70,6 +66,42 @@ void salidaDeInventario(){
     cout << endl;
     cout << "****************ZavMur****************" << endl;
     cout << "* Salida de Productos al Inventario *" << endl;
+    cout << "****************ZavMur****************" << endl;
+    cout << "Ingrese el codigo del producoto: ";
+    cin >> codigo;
+    cout << endl;
+    cout << "Ingrese la cantidad del producto:  ";
+    cin >> cantidad;
+    cout << endl;
+
+    movimientoInventario (codigo, cantidad, "-");
+}
+void transferenciaDeProductoRecivido(){
+    string codigo = "";
+    int cantidad = 0;
+
+    system ("cls");
+    cout << endl;
+    cout << "****************ZavMur****************" << endl;
+    cout << "* Transferencia De Producto Recivido *" << endl;
+    cout << "****************ZavMur****************" << endl;
+    cout << "Ingrese el codigo del producoto: ";
+    cin >> codigo;
+    cout << endl;
+    cout << "Ingrese la cantidad del producto:  ";
+    cin >> cantidad;
+    cout << endl;
+
+    movimientoInventario (codigo, cantidad, "+");
+}
+void trasferenciaDeProductosEnviados(){
+    string codigo = "";
+    int cantidad = 0;
+
+    system ("cls");
+    cout << endl;
+    cout << "****************ZavMur****************" << endl;
+    cout << "* Trasferencia De Productos Enviados *" << endl;
     cout << "****************ZavMur****************" << endl;
     cout << "Ingrese el codigo del producoto: ";
     cin >> codigo;
@@ -97,6 +129,8 @@ int main(int argc, char const *argv[])
         cout << "1 - Productos" << endl;
         cout << "2 - Entrada de Inventario" << endl;
         cout << "3 - Salida de Inventario" << endl;
+        cout << "4 - Transferencia de Productos Enviados a Tienda Norte" << endl;
+        cout << "5 - Transferencia de Productos Recividos de Tienda Norte" << endl;
         cout << "0 - Salir" << endl;
         cout << "Ingrese una opcion del menu: ";
         cin >> opcion;
@@ -109,19 +143,21 @@ int main(int argc, char const *argv[])
         case 2:
             ingresoDeInventario();
             break;
-        
-        case 3:{
+        case 3:
             salidaDeInventario();
             break;
-        }
-
-        default:
+        case 4:
+            transferenciaDeProductoRecivido();
             break;
+        case 5:
+            trasferenciaDeProductosEnviados();
+            break;        
+        default:
+        break;
         }
 
         system ("pause");
         cout << endl;
-
         if (opcion == 0)
         {
             break;
@@ -129,8 +165,5 @@ int main(int argc, char const *argv[])
         
 
         }
-    
-    
-
     return 0;
 }
