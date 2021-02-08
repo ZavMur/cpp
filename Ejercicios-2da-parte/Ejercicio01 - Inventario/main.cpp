@@ -64,9 +64,9 @@ void salidaDeInventario(){
 
     system ("cls");
     cout << endl;
-    cout << "****************ZavMur****************" << endl;
+    cout << "****************ZavMur***************" << endl;
     cout << "* Salida de Productos al Inventario *" << endl;
-    cout << "****************ZavMur****************" << endl;
+    cout << "****************ZavMur***************" << endl;
     cout << "Ingrese el codigo del producoto: ";
     cin >> codigo;
     cout << endl;
@@ -82,9 +82,9 @@ void transferenciaDeProductoRecivido(){
 
     system ("cls");
     cout << endl;
-    cout << "****************ZavMur****************" << endl;
-    cout << "* Transferencia De Producto Recivido *" << endl;
-    cout << "****************ZavMur****************" << endl;
+    cout << "*****************ZavMur*****************" << endl;
+    cout << "* Transferencia De Productos Recividos *" << endl;
+    cout << "*****************ZavMur*****************" << endl;
     cout << "Ingrese el codigo del producoto: ";
     cin >> codigo;
     cout << endl;
@@ -129,8 +129,8 @@ int main(int argc, char const *argv[])
         cout << "1 - Productos" << endl;
         cout << "2 - Entrada de Inventario" << endl;
         cout << "3 - Salida de Inventario" << endl;
-        cout << "4 - Transferencia de Productos Enviados a Tienda Norte" << endl;
-        cout << "5 - Transferencia de Productos Recividos de Tienda Norte" << endl;
+        cout << "4 - Transferencia de Productos Recividos de Tienda Norte" << endl;
+        cout << "5 - Transferencia de Productos Enviados a Tienda Norte" << endl;
         cout << "0 - Salir" << endl;
         cout << "Ingrese una opcion del menu: ";
         cin >> opcion;
