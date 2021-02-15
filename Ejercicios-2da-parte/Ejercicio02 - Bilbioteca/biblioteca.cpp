@@ -245,7 +245,7 @@ int main(int argc, char const *argv[])
                 if (libroEnminuscula.find(buscar) != string::npos) {
                     cout << "Libro encontrado: " << libro << endl;
 
-                    cout << "Tambien te sugerimos estos libros: " << endl;
+                    cout << "Tambien te sugerimos estos autores: " << endl;
 
                     int sugerencia1 = rand() % 38 + 1;
                     int sugerencia2 = rand() % 38 + 1;
